@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
+
 * {outline: 1px solid red;}
 * {
     font-style: none;
@@ -45,6 +48,14 @@ body,ul {
     margin: 0; padding: 0;
   }
 
+  body {
+    background-color:  #ffd88f;
+    font-family: 'NanumSquare';
+    color: #333333;
+    margin: 0 auto;
+}
+
+
 
   .wrap{
     display: grid;
@@ -53,7 +64,7 @@ body,ul {
     grid-template-areas: 
         ". topmenu ."
         ". midmenu ."
-        ". map ."
+        ". main ."
         ". botmenu ."
         ". findA ."
         ". findB ."
@@ -70,7 +81,7 @@ body,ul {
     height: 0; 
     overflow: hidden;
   } */
-
+/* 
   .nav1 {
     display: flex;
     align-items: center;
@@ -94,20 +105,146 @@ body,ul {
 }
 
 .submenu {
-  height: 0; /*ul의 높이를 안보이게 처리*/
+  height: 0; 
   overflow: hidden;
 
 }
 
 .menu > li:hover {
     background-color: #ffd88f;
-    /* transition-duration: 0.5s; */
+    
   }
   
   .menu > li:hover .submenu {
-    height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+    height: 250px; 
     transition-duration: 1s;
-  }
+  } 
+
+  */
+  .wrap .header__menu {
+    display: flex;
+    padding-top: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.wrap .header__menu .menu {
+    width: 100%;
+    margin: 12px 0;
+    font-weight: bold;
+    position: sticky;
+    z-index: 3;
+}
+
+#gnbLogo {    
+    font-family: 'Jua', sans-serif;  
+    font-weight: 400;
+    size: 28px;  
+    color: #F26D3D;
+    text-align: center;
+    display: flex;
+}
+#gnbLogo h1{
+    font-size: 22px;
+    margin-left: 12px;
+}
+#gnbLogo a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#gnbLogo:hover{
+    color: #F29A2E;
+}
+
+.menu .menu__list1 {
+    padding: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 2em;
+}
+
+
+.menu__list1 .menu__item1 {
+    width: 100%; height: 50px;
+    margin: 0 10px;
+    line-height: 2rem;
+}
+
+.menu__list1 a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu__list1 .menu__item1:hover a {
+    color: #ff9a1e;
+}
+
+.menu .menu__list2 {
+    display: none;
+    position: absolute;
+    margin: 0;
+}
+.menu__list2 .menu__item2 {
+    background-color: rgba(255, 255, 255, 0.637);
+}
+.menu__list2 .menu__item2:hover a {
+    color: #f26d3d;
+}
+
+.menu__list1 .menu__item1:hover .menu__list2 {
+    display: block;
+}
+
+.menu__item:hover .menu__list2 li {
+    display: block;
+    margin: 0;
+}
+
+.menu__list2 li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu__list1 .menu__middle {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.menu__list1 .menu__middle li {
+    width: 200px;
+}
+
+.menu__list1 .menu__item1 {
+    width: 200px;
+}
+
+.menu__right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.menu__right .menu__item1 {
+    width: 70px;
+    margin: 0 4px;
+}
+.menu__right .menu__item1:nth-of-type(1) a{
+    text-align: right;
+}
+.menu__right .menu__item1:nth-of-type(2) a{
+    text-align: left;
+}
+
+
 
 .midmenu{
     background-color: white;
@@ -116,7 +253,6 @@ body,ul {
 .h5{
     margin-top: 20px;
     margin-left: 30px;
-    /* margin-bottom: 20px; */
     margin-right: 30px;
 }
 
@@ -139,6 +275,15 @@ body,ul {
     margin-left: 30px;
     margin-bottom: 30px;
 }
+
+.main{
+    width: 100%;
+    height: 900px;
+    /* border: 4px solid orangered;     */
+}
+
+
+
 
 .search{
     width: 120px;
@@ -164,12 +309,19 @@ body,ul {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 .sel {
     width: 150px;
     height: 50px;
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
+
+
+
 
 .findA{
     margin-top: 10px;
@@ -199,7 +351,7 @@ body,ul {
 
 
 
-.footer{
+/* .footer{
     text-align: center;
     background-color: rgb(192, 188, 188);
     padding: 30px;
@@ -214,7 +366,7 @@ body,ul {
 
 .ftin{
     margin: 10px;
-}
+} */
 
   
   /* .nav1 > li:hover {
@@ -226,3 +378,65 @@ body,ul {
     height: 250px; 
     transition-duration: 1s;
   } */
+
+  /* FNB*/
+.wrap .footer__fnb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8af55;
+    background-image: url(../img/img_bird02.png);
+    background-position: left 0 bottom 0%;
+    background-size: 20% 40%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#f1f1f1;
+
+}
+.wrap .footer__fnb .fnb{
+    max-width: 100%;
+}
+
+.fnb__buttons {
+    width: 12.5em; height: 30px;
+    font-size: 0.9rem;
+    background-color: #f26d3d;
+    line-height: 30px;
+}
+.fnb__buttons:hover a{
+    background-color: #ffc47b;
+}
+
+.fnb__buttons.f-item1 {
+    margin: 50px auto 10px auto;
+}
+
+.fnb__buttons a {
+   display: inline-block;
+    width: 100%; height: 100%;
+}
+
+.fnb-mid-area {
+    display: flex;
+    flex-direction: row;
+}
+
+.fnb-mid-area .fnb__buttons {
+    width: 280px; margin: 30px 5px;
+}
+
+.fnb__info {
+    margin-top: 30px;
+}
+
+.fnb__info p {
+    margin: 0;
+    line-height: 1.4em;
+}
+
+.fnb__copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
