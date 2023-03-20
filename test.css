@@ -1,25 +1,20 @@
 @charset "utf-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
 @import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
 
 * {outline: 1px solid red;}
 * {
     font-style: none;
+    padding:0;margin:0;
 }
-*{padding:0;margin:0}
 
-li{list-style:none}
-
-a{text-decoration:none;font-size:14px}
-
-*{padding:0;margin:0}
 
 li{list-style:none}
 
 a{
     text-decoration:none;
     color: inherit;
+    font-size:14px
 }
 
 
@@ -30,10 +25,6 @@ a{
   'GRAD' 0,
   'opsz' 48
   
-}
-
-body{
-    background-color:  #ffd88f;
 }
 
 body,ul {
@@ -56,7 +47,7 @@ body,ul {
 }
 
 
-
+/* 그리드 */
   .wrap{
     display: grid;
     grid-template-rows: 0.5fr auto auto auto auto auto auto auto auto;
@@ -75,52 +66,7 @@ body,ul {
 
 
 
-
-
-/* .submenu {
-    height: 0; 
-    overflow: hidden;
-  } */
-/* 
-  .nav1 {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    justify-content: space-around;
-    background-color: white;
-  }
-
-.topmenu{
-    margin: 30px;
-    
-}
-
-.inner{
-    display: flex;
-    justify-content: space-between;
-}
-.menuli{
-    width: 250px;
-    text-align: center;
-}
-
-.submenu {
-  height: 0; 
-  overflow: hidden;
-
-}
-
-.menu > li:hover {
-    background-color: #ffd88f;
-    
-  }
-  
-  .menu > li:hover .submenu {
-    height: 250px; 
-    transition-duration: 1s;
-  } 
-
-  */
+/* 헤더 메뉴 */
   .wrap .header__menu {
     display: flex;
     padding-top: 16px;
@@ -246,6 +192,9 @@ body,ul {
 
 
 
+
+
+
 .midmenu{
     background-color: white;
 }
@@ -322,7 +271,7 @@ body,ul {
 
 
 
-
+/* 병원목록 추출 파트 */
 .findA{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -350,35 +299,6 @@ body,ul {
 
 
 
-
-/* .footer{
-    text-align: center;
-    background-color: rgb(192, 188, 188);
-    padding: 30px;
-    margin-top: 20px;
-}
-
-.ft{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ftin{
-    margin: 10px;
-} */
-
-  
-  /* .nav1 > li:hover {
-    background-color: #94a9ff;
-    transition-duration: 0.5s;
-  }
-  
-  .nav1 > li:hover .submenu {
-    height: 250px; 
-    transition-duration: 1s;
-  } */
-
   /* FNB*/
 .wrap .footer__fnb {
     display: flex;
@@ -387,7 +307,7 @@ body,ul {
     justify-content: center;
     padding: 20px;
     background-color: #f8af55;
-    background-image: url(../img/img_bird02.png);
+    /* background-image: url(../img/img_bird02.png); */
     background-position: left 0 bottom 0%;
     background-size: 20% 40%;
     background-repeat: no-repeat;
@@ -440,3 +360,54 @@ body,ul {
     margin-top: 30px;
     font-size: 0.9rem;
 }
+
+
+
+
+
+   /* 장소검색 */
+   #search {
+    position: absolute;
+    top:100px; left:50px;
+    z-index: 10;
+  }
+
+  /* 삭제? */
+  #keyword {
+    margin-right:5px;
+    border:none;
+    border-radius: 4px;
+    padding:5px;
+    border:1px solid rgba(0,0,0,.2);
+  }
+
+
+#default_position_marker{
+    width:20px; height:20px;
+    background-color: rgba(0,255,0,.2);
+    border:1px solid rgba(0,255,0,.2);
+    border-radius: 50%;
+  }
+
+/* 내 위치 마커 */
+.whereIam{
+    width:20px; height:20px;
+    background-color: rgba(255,0,0,.2);
+    border:1px solid rgba(255,0,0,.2);
+    border-radius: 50%;
+    animation: impact 1.5s infinite;
+}
+
+
+/* 마커 특수효과 */
+@keyframes impact {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,0,0,.4);
+    }
+    80%{
+      box-shadow: 0 0 0 10px rgba(255,0,50,.1);
+    }
+    100%{
+      box-shadow: 0 0 0 10px rgba(255,0,50,.1);
+    }
+  }

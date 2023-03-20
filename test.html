@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- 네이버 API-->
-    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=uctxhlp4os"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=uctxhlp4os"></script>
     
 
     <title>동물병원찾기</title>
@@ -67,9 +67,8 @@
             <h5 class="h5">펫 병원</h5>
             <h2 class="h2">우리동물의 병원을 찾아보세요</h2>
             <form action="">
-                <input type="button" class="but1" value="현재위치로 설정">
+                <input id="myps" type="button" class="but1" value="현재위치로 설정">
                 <input type="button" class="but1" value="지역선택"><br><br><br>
-
                 <input type="button" class="but2" value="강아지">
                 <input type="button" class="but2" value="고양이">
                 <input type="button" class="but2" value="조류">
@@ -81,8 +80,10 @@
         <div class="midmenu-r">6</div>
         <div class="map-l">7</div>
         <div class="main" id="map">
-        
-            
+            <!-- 삭제? -->
+            <div id="search">
+                <input type="text" id="keyword"><button id="searchBtn">검색</button>
+              </div>
         </div>
         <div class="map-r">9</div>
         <div class="botmenu-l">10</div>
