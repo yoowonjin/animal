@@ -1,0 +1,430 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css');
+
+/* * {outline: 1px solid red;} */
+* {
+    font-style: none;
+    padding:0;margin:0;
+}
+
+
+li{list-style:none}
+
+a{
+    text-decoration:none;
+    color: inherit;
+    font-size:14px
+}
+
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+  
+}
+
+body,ul {
+    margin:0; padding:0;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h1,h2,h3{
+    margin: 0; padding: 0;
+  }
+
+  body {
+    background-color:  #ffd88f;
+    font-family: 'NanumSquare';
+    color: #333333;
+    margin: 0 auto;
+}
+
+
+/* 그리드 */
+  .wrap{
+    display: grid;
+    grid-template-rows: 0.5fr auto auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr minmax(320px, 1500px) 1fr;
+    grid-template-areas: 
+        ". topmenu ."
+        ". midmenu ."
+        ". main ."
+        ". botmenu ."
+        ". findA ."
+        ". findB ."
+        ". findC ."
+        ". findD ."
+        ". footer .";
+}
+
+
+
+/* 헤더 메뉴 */
+  .wrap .header__menu {
+    display: flex;
+    padding-top: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.wrap .header__menu .menu {
+    width: 100%;
+    margin: 12px 0;
+    font-weight: bold;
+    position: sticky;
+    z-index: 3;
+}
+
+#gnbLogo {    
+    font-family: 'Jua', sans-serif;  
+    font-weight: 400;
+    size: 28px;  
+    color: #F26D3D;
+    text-align: center;
+    display: flex;
+}
+#gnbLogo h1{
+    font-size: 22px;
+    margin-left: 12px;
+}
+#gnbLogo a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#gnbLogo:hover{
+    color: #F29A2E;
+}
+
+.menu .menu__list1 {
+    padding: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 2em;
+}
+
+
+.menu__list1 .menu__item1 {
+    width: 100%; height: 50px;
+    margin: 0 10px;
+    line-height: 2rem;
+}
+
+.menu__list1 a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu__list1 .menu__item1:hover a {
+    color: #ff9a1e;
+}
+
+.menu .menu__list2 {
+    display: none;
+    position: absolute;
+    margin: 0;
+}
+.menu__list2 .menu__item2 {
+    background-color: rgba(255, 255, 255, 0.637);
+}
+.menu__list2 .menu__item2:hover a {
+    color: #f26d3d;
+}
+
+.menu__list1 .menu__item1:hover .menu__list2 {
+    display: block;
+}
+
+.menu__item:hover .menu__list2 li {
+    display: block;
+    margin: 0;
+}
+
+.menu__list2 li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.menu__list1 .menu__middle {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.menu__list1 .menu__middle li {
+    width: 200px;
+}
+
+.menu__list1 .menu__item1 {
+    width: 200px;
+}
+
+.menu__right {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.menu__right .menu__item1 {
+    width: 70px;
+    margin: 0 4px;
+}
+.menu__right .menu__item1:nth-of-type(1) a{
+    text-align: right;
+}
+.menu__right .menu__item1:nth-of-type(2) a{
+    text-align: left;
+}
+
+
+
+
+
+
+.midmenu{
+    background-color: white;
+}
+
+.h5{
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.h2{
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+}
+.but1{
+    width: 200px;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.but2{
+    width: 120px;
+    height: 40px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.main{
+    width: 100%;
+    height: 900px;
+    /* border: 4px solid orangered;     */
+}
+
+
+
+
+.search{
+    width: 120px;
+    height: 40px;
+    margin-left: 30px;
+    color: white;
+    background-color: black;
+    justify-content: end;
+
+}
+
+.botmenu{
+    height: 100px;
+    line-height: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.butt{
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.sel {
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* 검색목록 */
+#placesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #placesList .item {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  #placesList .title {
+    font-weight: bold;
+  }
+  #placesList .address {
+    font-size: 0.8em;
+  }
+
+
+
+
+/* 병원목록 추출 파트 */
+.findA{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    height: 200px;
+}
+.findB{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    height: 200px;
+}
+.findC{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    height: 200px;
+}
+.findD{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+    height: 200px;
+}
+
+
+
+  /* FNB*/
+.wrap .footer__fnb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f8af55;
+    /* background-image: url(../img/img_bird02.png); */
+    background-position: left 0 bottom 0%;
+    background-size: 20% 40%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:#f1f1f1;
+
+}
+.wrap .footer__fnb .fnb{
+    max-width: 100%;
+}
+
+.fnb__buttons {
+    width: 12.5em; height: 30px;
+    font-size: 0.9rem;
+    background-color: #f26d3d;
+    line-height: 30px;
+}
+.fnb__buttons:hover a{
+    background-color: #ffc47b;
+}
+
+.fnb__buttons.f-item1 {
+    margin: 50px auto 10px auto;
+}
+
+.fnb__buttons a {
+   display: inline-block;
+    width: 100%; height: 100%;
+}
+
+.fnb-mid-area {
+    display: flex;
+    flex-direction: row;
+}
+
+.fnb-mid-area .fnb__buttons {
+    width: 280px; margin: 30px 5px;
+}
+
+.fnb__info {
+    margin-top: 30px;
+}
+
+.fnb__info p {
+    margin: 0;
+    line-height: 1.4em;
+}
+
+.fnb__copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+   /* 장소검색 */
+   #search {
+    position: absolute;
+    top:100px; left:50px;
+    z-index: 10;
+  }
+
+  /* 삭제? */
+  #keyword {
+    margin-right:5px;
+    border:none;
+    border-radius: 4px;
+    padding:5px;
+    border:1px solid rgba(0,0,0,.2);
+  }
+
+
+#default_position_marker{
+    width:20px; height:20px;
+    background-color: rgba(0,255,0,.2);
+    border:1px solid rgba(0,255,0,.2);
+    border-radius: 50%;
+  }
+
+/* 내 위치 마커 */
+.whereIam{
+    width:20px; height:20px;
+    background-color: rgba(255,0,0,.2);
+    border:1px solid rgba(255,0,0,.2);
+    border-radius: 50%;
+    animation: impact 1.5s infinite;
+}
+
+
+/* 마커 특수효과 */
+@keyframes impact {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,0,0,.4);
+    }
+    80%{
+      box-shadow: 0 0 0 10px rgba(255,0,50,.1);
+    }
+    100%{
+      box-shadow: 0 0 0 10px rgba(255,0,50,.1);
+    }
+  }
